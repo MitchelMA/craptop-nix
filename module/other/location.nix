@@ -1,5 +1,5 @@
 {
   # Location of my home
-  location.latitude  = 52.51;
-  location.longitude = 4.64;
+  location.latitude  = 52.09;
+  location.longitude = 5.1;
 }

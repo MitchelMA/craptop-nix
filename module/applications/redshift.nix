@@ -4,7 +4,7 @@
 
     brightness = {
       day =   "1.0";
-      night = "0.3";
+      night = "0.7";
     };
 
     temperature = {

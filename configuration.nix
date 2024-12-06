@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      /etc/nixos/hardware-configuration.nix
       # my own custom imports
       ./module/other/location.nix
       ./module/applications/redshift.nix
@@ -101,6 +101,7 @@
      git
      git-credential-oauth
      gh
+     redshift
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

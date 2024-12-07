@@ -15,6 +15,7 @@
       boost
       spotify
       signal-desktop
+      tailscale
     ];
   };
 }

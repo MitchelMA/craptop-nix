@@ -13,6 +13,7 @@
       ./module/applications/redshift.nix
       ./module/smb/NAS.nix
       ./module/applications/vim.nix
+      ./module/applications/tailscale.nix
 
       # User imports (DON'T TOUCH!)
       ./module/users/mitchel.nix

@@ -16,6 +16,8 @@
       spotify
       signal-desktop
       tailscale
+      kitty
+      lunarvim
     ];
   };
 }

@@ -17,7 +17,6 @@
       signal-desktop
       tailscale
       kitty
-      lunarvim
     ];
   };
 }

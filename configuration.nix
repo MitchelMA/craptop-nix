@@ -51,18 +51,43 @@
     LC_TIME = "nl_NL.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  environment.pathsToLink = ["/libexec"];
+  services.displayManager.defaultSession = "xfce";
+  services.xserver = {
+      # Enable the X11 windowing system.
+      enable = true;
 
-  # Enable the XFCE Desktop Environment.
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.xfce.enable = true;
+      # Enable the XFCE Desktop Environment.
+      desktopManager = {
+          # xterm.enable = false;
+          xfce = {
+              enable = true;
+              # noDesktop = true;
+              # enableXfwm = false;
+          };
+      };
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "altgr-intl";
+      displayManager = {
+          lightdm.enable = true;
+      };
+
+      windowManager.i3 = {
+          enable = true;
+          extraPackages = with pkgs; [
+              dmenu
+              i3status
+              i3blocks
+          ];
+          package = pkgs.i3-gaps;
+      };
+
+      # Configure keymap in X11
+      xkb = {
+          layout = "us";
+          variant = "altgr-intl";
+      };
   };
+
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

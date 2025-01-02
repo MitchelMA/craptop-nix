@@ -17,6 +17,9 @@
 
       # User imports (DON'T TOUCH!)
       ./module/users/mitchel.nix
+
+      # Firefox container
+      ./module/containers/firefox-novnc.nix
     ];
 
   # Bootloader.

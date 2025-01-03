@@ -15,7 +15,7 @@ in {
         networking.nat = {
             enable = true;
             internalInterfaces = ["ve-+"];
-            externalInterface = "wlp3s0";
+            externalInterface = "ens3";
         };
 
         containers.firefox-vnc = {

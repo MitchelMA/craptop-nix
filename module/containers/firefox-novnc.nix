@@ -15,7 +15,7 @@ in {
         networking.nat = {
             enable = true;
             internalInterfaces = ["ve-+"];
-            externalInterface = "ens3";
+            externalInterface = "wlp3s0";
         };
 
         containers.firefox-vnc = {
@@ -25,9 +25,18 @@ in {
             hostAddress = "192.168.100.10";
             localAddress = "192.168.100.11";
 
+            forwardPorts = [
+                { 
+                    protocol = "tcp";
+                    hostPort = 6154;
+                    containerPort = 6080;
+                }
+            ];
+
             config = { config, pkgs, ... }: {
                 system.stateVersion = "22.05";
                 networking.firewall.allowedTCPPorts = [ 6080 ];
+                networking.defaultGateway = "192.168.100.10";
 
                 users.users.firefox = {
                     home = "/home/firefox";

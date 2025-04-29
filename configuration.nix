@@ -14,6 +14,7 @@
       ./module/smb/NAS.nix
       ./module/applications/vim.nix
       ./module/applications/tailscale.nix
+      ./module/applications/firefox.nix
 
       # User imports (DON'T TOUCH!)
       ./module/users/mitchel.nix
@@ -118,9 +119,6 @@
   nixpkgs.config.allowUnfree = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-
-  # Install firefox. (not!)
-  programs.firefox.enable = false;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget

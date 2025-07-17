@@ -130,6 +130,9 @@
     gh
     redshift
     xorg.xkill
+    localsend
+    libreoffice-qt6
+    nmap
   ];
 
   environment.sessionVariables = {
@@ -152,7 +155,10 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 6154 ];
+  networking.firewall.allowedTCPPorts = [ 
+      6154
+      53317
+  ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;

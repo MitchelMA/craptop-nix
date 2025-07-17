@@ -17,6 +17,7 @@
       signal-desktop
       tailscale
       kitty
+      openttd
     ];
   };
 }

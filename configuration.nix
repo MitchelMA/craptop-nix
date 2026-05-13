@@ -15,6 +15,7 @@
       ./module/applications/vim.nix
       ./module/applications/tailscale.nix
       ./module/applications/firefox.nix
+      ./module/sshd/openssh.nix
 
       # User imports (DON'T TOUCH!)
       ./module/users/mitchel.nix
@@ -134,6 +135,7 @@
     localsend
     libreoffice-qt6
     nmap
+    exfatprogs
   ];
 
   environment.sessionVariables = {

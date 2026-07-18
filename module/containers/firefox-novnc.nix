@@ -47,7 +47,7 @@ in {
                 systemd.services.tiger-vnc = {
                     wantedBy = ["multi-user.target"];
                     serviceConfig = {
-                        ExecStart = ''${pkgs.xorg.xinit}/bin/xinit ${firefox-xinit}/bin/firefox-xinit -- ${pkgs.tigervnc}/bin/Xvnc :1 SecurityTypes=None'';
+                        ExecStart = ''${pkgs.xinit}/bin/xinit ${firefox-xinit}/bin/firefox-xinit -- ${pkgs.tigervnc}/bin/Xvnc :1 SecurityTypes=None'';
                         User = "firefox";
                     };
                 };
@@ -67,8 +67,8 @@ in {
                     firefox-xinit
                     novnc
                     tigervnc
-                    xorg.xrandr
-                    xorg.xinit
+                    xrandr
+                    xinit
                 ];
             };
         };

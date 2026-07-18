@@ -6,7 +6,8 @@
     description = "Mitchel Vonk";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      neofetch
+      fastfetch
+      hyfetch
       chromium
       discord-ptb
       gcc

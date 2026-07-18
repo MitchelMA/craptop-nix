@@ -1,7 +1,7 @@
 {pkgs, ...}:
 {
   environment.systemPackages = with pkgs; [
-    ((vim_configurable.override {  }).customize {
+    ((vim-full.override {  }).customize {
       name = "vim";
      
       vimrcConfig.packages.myplugins = with pkgs.vimPlugins; {

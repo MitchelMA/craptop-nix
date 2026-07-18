@@ -84,7 +84,7 @@
               i3status
               i3blocks
           ];
-          package = pkgs.i3-gaps;
+          package = pkgs.i3;
       };
 
       # Configure keymap in X11
@@ -120,7 +120,8 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  documentation.dev.enable = true;
+  documentation.man.cache.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -131,11 +132,15 @@
     git-credential-oauth
     gh
     redshift
-    xorg.xkill
+    xkill
     localsend
     libreoffice-qt6
     nmap
     exfatprogs
+
+    man-pages
+    man-pages-posix
+    glibcInfo
   ];
 
   environment.sessionVariables = {
